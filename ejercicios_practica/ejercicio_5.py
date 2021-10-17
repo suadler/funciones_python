@@ -9,14 +9,22 @@
 
 # Ejercicios con funciones y módulos
 import random
-
+lista = []
 # --------------------------------
 # Aquí dentro definir la función contar
 
-
+def contar (lista, numero):
+    resultado = lista.count(numero)
+    return resultado
 
 # Aquí copiar la función lista_aleatoria
 # ya elaborada
+
+def lista_aleatoria(inicio, fin, cantidad):
+    for numero in range(0, cantidad):
+        numero = random.randrange(inicio, fin+1)
+        lista.append(numero)
+        return lista
 
 
 # --------------------------------
@@ -36,6 +44,9 @@ if __name__ == '__main__':
     # un rango de 1 a 9 inclusive
 
     # lista_numeros = lista_aleatoria(inicio, fin, cantidad)
+    lista_numeros = lista_aleatoria(inicio, fin, cantidad)
+    
+    print (lista_numeros)
 
     # Generar una una nueva funcion que se llame "contar",
     # que cuente la cantidad de veces que un elemento pasado
@@ -53,10 +64,12 @@ if __name__ == '__main__':
     # Averiguar cuantas veces se repite el numero 3
 
     # cantidad_tres = contar(lista_numeros, 3)
+    cantidad_tres = contar(lista, 3)
 
     # Imprimir en pantalla "cantidad_tres" que informa
     # cuantas veces se repite el tres en la lista
 
     # print(cantidad_tres)
+    print(cantidad_tres)
 
     print("terminamos")
